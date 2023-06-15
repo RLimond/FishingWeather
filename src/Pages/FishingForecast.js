@@ -63,11 +63,12 @@ export default function FishingForecast(){
         async function getWeather(){
             try{
             // get current weather
-            const currentWeatherResponse = await fetch(`${process.env.REACT_APP_request_url}/currentweather?lat=${latitude}&lon=${longitude}`)
+            //${process.env.REACT_APP_request_url}
+            const currentWeatherResponse = await fetch(`/currentweather?lat=${latitude}&lon=${longitude}`)
             const currentWeather = await currentWeatherResponse.json()
             setcurrentWeather(currentWeather)
             // get 5 day forecast
-            const foreCastResponse = await fetch(`${process.env.REACT_APP_request_url}/fiveDayWeather?lat=${latitude}&lon=${longitude}`)
+            const foreCastResponse = await fetch(`/fiveDayWeather?lat=${latitude}&lon=${longitude}`)
             const forecast = await foreCastResponse.json()
             setWeatherForecast(forecast)
             console.log("Fetched weather")
