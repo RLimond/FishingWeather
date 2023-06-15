@@ -33,6 +33,10 @@ app.get('/fiveDayWeather', async (req,res) =>{
         }
 })
 
+app.get('/health', (req,res) =>{
+    res.status(200).send('All good')
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
   });
