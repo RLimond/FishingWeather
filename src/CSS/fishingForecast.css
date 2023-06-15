@@ -1,0 +1,111 @@
+.forecast-main{
+}
+.map-container {
+    margin-top: 5px;
+    height: 540px;
+    width: 500px;
+    }
+.background-image{
+    height: 100vh;
+    background-image: url('../Images/map.svg');
+    background-color: #f8fafb;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.weather-map-container{
+    display: flex;
+    justify-content: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.forecast-header{
+    display: flex;
+}
+.future-weather-container{
+    width: 75%;
+}
+.box{
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    display: flex;
+}
+.day-selection{
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.day-selection-info{
+    display: flex;
+    width: 150px;
+    color: #868585;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between; /*makes tooltip-img float to the right*/
+}
+.tooltip-img{
+    width: 18px;
+    height: 18px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #f9f9f9;
+    color: #888;
+    text-align: center;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+.dropdown{
+    width: 150px;
+}
+.forecast-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 31%;
+}
+.title{
+    font-size: 30px;
+    color: #888;
+    font-weight: bold;
+}
+
+@media (max-width: 750px){
+    .forecast-main{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+    .weather-map-container{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .current-weather{
+        margin-left: 8%;
+    }
+    .map-container{
+        height: 524px;
+        margin-left: 13%;
+        width: 300px;
+    }
+    .forecast-title{
+        padding-left: 10px;
+        padding-top: 10px
+    }
+}

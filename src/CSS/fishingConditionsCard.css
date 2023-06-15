@@ -1,0 +1,93 @@
+.current-weather-card{
+    overflow: hidden;
+    box-shadow: 10px 10px 40px -5px rgba(0, 0, 0, 0.25);
+    width: 250px;
+    padding: 25px;
+    min-height: 300px;
+    min-width: 250px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: rgb(199, 212, 231);
+    color: #868585;
+    opacity: 80%;
+}
+.date-time{
+    text-align: left;
+    font-size: 20px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.temp{
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 60px;
+}
+.temp span{
+    vertical-align: top;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.details-right{
+    text-align: right;
+}
+.condition{
+    font-size: 1.25rem;
+}
+.location{
+
+}
+.icon-container{
+    display: flex;
+}
+.weather-icon{
+    width: 100%;
+    margin-top: 0vh;
+}
+.grade-container{
+    margin-top: -50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.grade-title{
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.grade{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.75rem;
+    font-size: 2.5rem;
+}
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    row-gap: 15px;
+}
+.wind-speed{
+    font-weight: bold;
+}
+.pressure{
+    font-weight: bold;
+}
+.humidity{
+    font-weight: bold;
+}
+.visibility{
+    font-weight: bold;
+}
