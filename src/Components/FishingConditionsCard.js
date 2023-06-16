@@ -46,7 +46,7 @@ const FishingConditionsCard = ({ weatherData, location, time}) => {
           <div className='wind-speed'>Wind speed: {(wind.speed*3.6*0.62).toFixed(0)} mi/h</div>
           {/*<div className='pressure'>pressure (hpa): {pressure}</div>*/}
           <div className='humidity'>humidity: {humidity}%</div>
-          {<div className='visibility'>visibility: {((visibility/1000) * 0.621371).toFixed(0)}km</div>}
+          {<div className='visibility'>visibility: {((visibility/1000) * 0.621371).toFixed(0)}mi</div>}
         </div>
     </div>
   );
