@@ -63,8 +63,6 @@ export default function FishingForecast(){
         async function getWeather(){
             try{
             // get current weather
-            //${process.env.REACT_APP_request_url}
-            //const currentWeatherResponse = await fetch(`http://localhost:8000/currentweather?lat=${latitude}&lon=${longitude}`)
             const currentWeatherResponse = await fetch(`https://fishingweather-w103.onrender.com/currentweather?lat=${latitude}&lon=${longitude}`)
             const currentWeather = await currentWeatherResponse.json()
             setcurrentWeather(currentWeather)

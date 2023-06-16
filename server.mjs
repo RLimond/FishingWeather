@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 const PORT = process.env.PORT || 8000
 const app = express()
+// allow only origin url to access api
 app.use(cors(
     ({
         origin: ["https://fishingweather.onrender.com"],
@@ -13,7 +14,7 @@ app.use(cors(
     })
 ))
 app.use(express.json())
-
+// returns current weather data from the openWeather api
 app.get('/currentweather', async (req,res) =>{
     try{
     const lat = req.query.lat
@@ -26,9 +27,8 @@ app.get('/currentweather', async (req,res) =>{
         res.status(404).send({message:"not found"})
     }
 })
-
+// returns 5 day weather forecast data from the openWeather api
 app.get('/fiveDayWeather', async (req,res) =>{
-    console.log('5day weather request')
     try{
         const lat = req.query.lat
         const lon = req.query.lon
