@@ -81,6 +81,8 @@
 }
 .wind-speed{
     font-weight: bold;
+    grid-column: 1 / span 2; /* Spans 2 columns */
+    grid-row: 1; /* Occupies the first row */
 }
 .pressure{
     font-weight: bold;

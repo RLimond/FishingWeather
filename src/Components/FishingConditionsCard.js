@@ -13,17 +13,6 @@ const FishingConditionsCard = ({ weatherData, location, time}) => {
   const { main: weatherMain, description, icon } = weather[0];
   const { temp, humidity, pressure} = main;
 
-  // Define the fishing conditions based on the weather data
-  let condition = '';
-  if (weatherMain === 'Clear' && temp > 290 && humidity < 60 && wind.speed < 10) {
-    condition = 'Excellent';
-  } else if (temp > 280 && temp <= 290 && humidity < 70 && wind.speed < 15) {
-    condition = 'Good';
-  } else if (temp > 270 && temp <= 280 && humidity < 80 && wind.speed < 20) {
-    condition = 'Fair';
-  } else {
-    condition = 'Poor';
-  }
   const quality = calculateFishingQuality(pressure, weather[0].main, temp)
 
   function formatDate(dateString) {
@@ -54,24 +43,13 @@ const FishingConditionsCard = ({ weatherData, location, time}) => {
             <div className='grade'>{categorizeQuality(quality)}</div>
           </div>
         <div className='info'>
-          <div className='wind-speed'>Wind speed: {(wind.speed*3.6).toFixed(2)}km/h</div>
-          <div className='pressure'>pressure (hpa): {pressure}</div>
+          <div className='wind-speed'>Wind speed: {(wind.speed*3.6*0.62).toFixed(0)} m/h</div>
+          {/*<div className='pressure'>pressure (hpa): {pressure}</div>*/}
           <div className='humidity'>humidity: {humidity}%</div>
-          <div className='visibility'>visibility: {visibility/1000}km</div>
+          {<div className='visibility'>visibility: {visibility/1000}km</div>}
         </div>
     </div>
   );
 };
 
 export default FishingConditionsCard;
-
-/*
-      <h2>Fishing Conditions</h2>
-      <p>Weather: {weatherMain}</p>
-      <p>Description: {description}</p>
-      <p>Temperature: {temp} K</p>
-      <p>Humidity: {humidity}%</p>
-      <p>Wind Speed: {wind.speed} m/s</p>
-      <p>Condition: {condition}</p>
-      <p>visibility: {visibility/1000} km</p>
-*/
