@@ -1,6 +1,7 @@
 # FishingWeather
 A MERN stack Webapp which fetches, displays, and grades the fishing conditions for a location\
 Live demo: https://fishingweather.onrender.com/
+note: Its hosted on a free server so it may take a minute to boot up before the api request can be sent, just wait a minute or two and it should render
 
 # Info
 Look up any location and recieve a judgement of the fishing conditions based on the weather.\
