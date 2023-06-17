@@ -110,9 +110,9 @@ export default function FishingForecast(){
               <div className='weather-map-container'>
                 <div className='current-weather'>
                   {
-                    currentWeather && (
+                    currentWeather ? (
                         <FishingConditionsCard weatherData={currentWeather} location={locationName}/>
-                    )
+                    ) : <div>Server is inactive while site is not in use, please wait a minute and it will boot up</div>
                   }
                 </div>
                   <div className='map-box'>
